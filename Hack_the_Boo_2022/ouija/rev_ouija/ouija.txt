@@ -1,0 +1,1 @@
+Retrieving key.Hmm, I don't like that one. Let's pick a new one.Yes, 18 will do nicely.Let's get ready to start. HTB{Adding_sleeps_to_your_code_makes_it_easy_to_optimize_later!}

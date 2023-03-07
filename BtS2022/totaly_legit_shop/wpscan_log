@@ -1,0 +1,136 @@
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.22
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[32m[+][0m URL: http://34.107.92.149:30081/ [34.107.92.149]
+[32m[+][0m Started: Sun Jun  5 12:45:43 2022
+
+Interesting Finding(s):
+
+[32m[+][0m Headers
+ | Interesting Entry: Server: Apache/2.4.53 (Debian)
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[32m[+][0m XML-RPC seems to be enabled: http://34.107.92.149:30081/xmlrpc.php
+ | Found By: Headers (Passive Detection)
+ | Confidence: 60%
+ | Confirmed By: Link Tag (Passive Detection), 30% confidence
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
+
+[32m[+][0m WordPress version 6.0 identified (Latest, released on 2022-05-24).
+ | Found By: Rss Generator (Passive Detection)
+ |  - http://34.107.92.149:30081/?feed=rss2, <generator>https://wordpress.org/?v=6.0</generator>
+ |  - http://34.107.92.149:30081/?feed=comments-rss2, <generator>https://wordpress.org/?v=6.0</generator>
+ |  - http://34.107.92.149:30081/?feed=rss2&page_id=2, <generator>https://wordpress.org/?v=6.0</generator>
+
+[32m[+][0m WordPress theme in use: storefront
+ | Location: http://34.107.92.149:30081/wp-content/themes/storefront/
+ | Latest Version: 4.1.0 (up to date)
+ | Last Updated: 2022-04-04T00:00:00.000Z
+ | Readme: http://34.107.92.149:30081/wp-content/themes/storefront/README.txt
+ | Style URL: http://34.107.92.149:30081/wp-content/themes/storefront/style.css?ver=4.1.0
+ | Style Name: Storefront
+ | Style URI: https://woocommerce.com/storefront/
+ | Description: Storefront is the perfect theme for your next WooCommerce project. Designed and developed by WooCommerce Core developers, it features a bespoke integration with WooCommerce itself plus many of the most popular customer facing WooCommerce extensions. There are several layout & color options to personalise your shop, multiple widget regions, a responsive design and much more. Developers will love its lean and extensible codebase making it a joy to customize and extend. Looking for a WooCommerce theme? Look no further!
+ | Author: Automattic
+ | Author URI: https://woocommerce.com/
+ | License: GNU General Public License v3 or later
+ | License URI: https://www.gnu.org/licenses/gpl-3.0.html
+ | Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
+ | Text Domain: storefront
+ |
+ | Found By: Css Style In Homepage (Passive Detection)
+ | Confirmed By: Css Style In 404 Page (Passive Detection)
+ |
+ | Version: 4.1.0 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - http://34.107.92.149:30081/wp-content/themes/storefront/style.css?ver=4.1.0, Match: 'Version:      4.1.0'
+
+
+[34m[i][0m No plugins Found.
+
+[33m[!][0m No WPScan API Token given, as a result vulnerability data has not been output.
+[33m[!][0m You can get a free API token with 25 daily requests by registering at https://wpscan.com/register
+
+[32m[+][0m Finished: Sun Jun  5 12:45:52 2022
+[32m[+][0m Requests Done: 11
+[32m[+][0m Cached Requests: 41
+[32m[+][0m Data Sent: 3.989 KB
+[32m[+][0m Data Received: 328.96 KB
+[32m[+][0m Memory used: 239.137 MB
+[32m[+][0m Elapsed time: 00:00:08
+
+Scan Aborted: Canceled by User
+Trace: /var/lib/gems/2.7.0/gems/cms_scanner-0.13.8/lib/cms_scanner/browser/options.rb:87:in `sleep'
+/var/lib/gems/2.7.0/gems/cms_scanner-0.13.8/lib/cms_scanner/browser/options.rb:87:in `trottle!'
+/var/lib/gems/2.7.0/gems/cms_scanner-0.13.8/lib/cms_scanner.rb:64:in `block in <module:CMSScanner>'
+/var/lib/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/callbacks.rb:146:in `block in execute_callbacks'
+/var/lib/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/callbacks.rb:145:in `each'
+/var/lib/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/callbacks.rb:145:in `execute_callbacks'
+/var/lib/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/operations.rb:35:in `finish'
+/var/lib/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/easy_factory.rb:164:in `block in set_callback'
+/var/lib/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/response_callbacks.rb:69:in `block in complete'
+/var/lib/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/response_callbacks.rb:69:in `each'
+/var/lib/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/response_callbacks.rb:69:in `complete'
+/var/lib/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/operations.rb:34:in `perform'
+/var/lib/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/operations.rb:16:in `run'
+/var/lib/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/cacheable.rb:18:in `run'
+/var/lib/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/block_connection.rb:31:in `run'
+/var/lib/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/stubbable.rb:25:in `run'
+/var/lib/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/before.rb:26:in `run'
+/var/lib/gems/2.7.0/gems/cms_scanner-0.13.8/lib/cms_scanner/browser/actions.rb:20:in `get'
+/var/lib/gems/2.7.0/gems/cms_scanner-0.13.8/lib/cms_scanner/finders/finder/enumerator.rb:60:in `maybe_get_full_response'
+/var/lib/gems/2.7.0/gems/cms_scanner-0.13.8/lib/cms_scanner/finders/finder/enumerator.rb:41:in `block (2 levels) in enumerate'
+/var/lib/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/callbacks.rb:146:in `block in execute_callbacks'
+/var/lib/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/callbacks.rb:145:in `each'
+/var/lib/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/callbacks.rb:145:in `execute_callbacks'
+/var/lib/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/request/operations.rb:35:in `finish'
+/var/lib/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/easy_factory.rb:164:in `block in set_callback'
+/var/lib/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/response_callbacks.rb:69:in `block in complete'
+/var/lib/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/response_callbacks.rb:69:in `each'
+/var/lib/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/easy/response_callbacks.rb:69:in `complete'
+/var/lib/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/multi/operations.rb:189:in `check'
+/var/lib/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/multi/operations.rb:202:in `run'
+/var/lib/gems/2.7.0/gems/ethon-0.15.0/lib/ethon/multi/operations.rb:50:in `perform'
+/var/lib/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/hydra/runnable.rb:15:in `run'
+/var/lib/gems/2.7.0/gems/typhoeus-1.4.0/lib/typhoeus/hydra/memoizable.rb:51:in `run'
+/var/lib/gems/2.7.0/gems/cms_scanner-0.13.8/lib/cms_scanner/finders/finder/enumerator.rb:49:in `enumerate'
+/var/lib/gems/2.7.0/gems/wpscan-3.8.22/app/finders/themes/known_locations.rb:22:in `aggressive'
+/var/lib/gems/2.7.0/gems/cms_scanner-0.13.8/lib/cms_scanner/finders/base_finders.rb:31:in `run_finder'
+/var/lib/gems/2.7.0/gems/cms_scanner-0.13.8/lib/cms_scanner/finders/same_type_finders.rb:16:in `block (2 levels) in run'
+/var/lib/gems/2.7.0/gems/cms_scanner-0.13.8/lib/cms_scanner/finders/same_type_finders.rb:15:in `each'
+/var/lib/gems/2.7.0/gems/cms_scanner-0.13.8/lib/cms_scanner/finders/same_type_finders.rb:15:in `block in run'
+/var/lib/gems/2.7.0/gems/cms_scanner-0.13.8/lib/cms_scanner/finders/same_type_finders.rb:14:in `each'
+/var/lib/gems/2.7.0/gems/cms_scanner-0.13.8/lib/cms_scanner/finders/same_type_finders.rb:14:in `run'
+/var/lib/gems/2.7.0/gems/cms_scanner-0.13.8/lib/cms_scanner/finders/independent_finder.rb:21:in `find'
+/var/lib/gems/2.7.0/gems/cms_scanner-0.13.8/lib/cms_scanner/finders/independent_finder.rb:12:in `find'
+/var/lib/gems/2.7.0/gems/wpscan-3.8.22/lib/wpscan/target.rb:67:in `themes'
+/var/lib/gems/2.7.0/gems/wpscan-3.8.22/app/controllers/enumeration/enum_methods.rb:119:in `enum_themes'
+/var/lib/gems/2.7.0/gems/wpscan-3.8.22/app/controllers/enumeration.rb:14:in `run'
+/var/lib/gems/2.7.0/gems/cms_scanner-0.13.8/lib/cms_scanner/controllers.rb:50:in `each'
+/var/lib/gems/2.7.0/gems/cms_scanner-0.13.8/lib/cms_scanner/controllers.rb:50:in `block in run'
+/usr/lib/ruby/2.7.0/timeout.rb:78:in `timeout'
+/var/lib/gems/2.7.0/gems/cms_scanner-0.13.8/lib/cms_scanner/controllers.rb:45:in `run'
+/var/lib/gems/2.7.0/gems/cms_scanner-0.13.8/lib/cms_scanner/scan.rb:24:in `run'
+/var/lib/gems/2.7.0/gems/wpscan-3.8.22/bin/wpscan:17:in `block in <top (required)>'
+/var/lib/gems/2.7.0/gems/cms_scanner-0.13.8/lib/cms_scanner/scan.rb:15:in `initialize'
+/var/lib/gems/2.7.0/gems/wpscan-3.8.22/bin/wpscan:6:in `new'
+/var/lib/gems/2.7.0/gems/wpscan-3.8.22/bin/wpscan:6:in `<top (required)>'
+/usr/local/bin/wpscan:23:in `load'
+/usr/local/bin/wpscan:23:in `<main>'

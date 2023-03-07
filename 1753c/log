@@ -1,0 +1,24 @@
+---
+
+DIRB v2.22  
+By The Dark Raver
+
+---
+
+START_TIME: Sun Feb 27 12:44:34 2022
+URL_BASE: https://1753ctf.ams3.digitaloceanspaces.com/g/
+
+---
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: https://1753ctf.ams3.digitaloceanspaces.com/g/ ----
+
+- https://1753ctf.ams3.digitaloceanspaces.com/g/.git/HEAD (CODE:200|SIZE:23)  
+  (!) WARNING: All responses for this directory seem to be CODE = 403.  
+   (Use mode '-w' if you want to scan it anyway)
+
+---
+
+END_TIME: Sun Feb 27 12:44:43 2022
+DOWNLOADED: 109 - FOUND: 1
